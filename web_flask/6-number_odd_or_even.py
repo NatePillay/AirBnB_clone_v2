@@ -45,11 +45,10 @@ def number_template(n=None):
 def number_dir(n=None)
 	"""display an html page if number int and direction"""
 	if instance(n, int):
-		if n % 2:
-			num = "even"
+		if n % 2 == 0:
+			return render_template('6-number_odd_or_even.html', n=n, parity='even')
 		else:
-			num = "odd"
-		return render_template('6-number_odd_or_even.html', n=n, num=num)
+			return render_template('6-number_odd_or_even.html', n=n, parity='odd')
 
 if __name__ == '__main__':
-	app.run()
+	app.run(host='0.0.0.0', port=5000, debug=None)
