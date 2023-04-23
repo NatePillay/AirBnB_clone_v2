@@ -42,7 +42,7 @@ def number_template(n=None):
 		return render_template('5-number.html', n=n)
 
 @app.route("number_odd_or_even/<int:n>", strict_slashes=False)
-def number_dir(n=None)
+def number_direction(n=None):
 	"""display an html page if number int and direction"""
 	if instance(n, int):
 		if n % 2 == 0:
