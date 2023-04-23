@@ -20,7 +20,7 @@ def hbnb():
 def c_Text(text):
 	"""returns a given string + value"""
 	string_text = text.replace("_"," ")
-	print("C {}".format(string_text))
+	return "C {}".format(string_text)
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0", port=5000, debug=None)
