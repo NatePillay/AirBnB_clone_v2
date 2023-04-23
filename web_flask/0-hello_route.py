@@ -5,7 +5,7 @@ from flask import Flask
 
 app = Flask("__name__")
 
-@app.route('/', stict_slashes=False)
+@app.route('/', strict_slashes=False)
 def hello():
 	"""Return a greeting"""
 	return ("Hello HBNB!")
