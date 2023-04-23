@@ -29,11 +29,11 @@ def python_Text(text="is_cool"):
 	string_text = text.replace("_"," ")
 	return "Python {}".format(string_text)
 
-@app.route("/number/<n>", strict_slashes=False)
-def number(n):
+@app.route("/number/<int:n>", strict_slashes=False)
+def isNumber(n):
 	"""display n is number if n is int"""
 	if isinstance(n, int):
-		return ("{} is a number".formate(n))
+		return "{} is a number".formate(n)
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0", port=5000, debug=None)
